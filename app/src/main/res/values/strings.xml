@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">RecyclerView Item Decoration</string>
+    <string name="gridlayout">GridLayout</string>
+
 </resources>
