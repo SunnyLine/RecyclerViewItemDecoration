@@ -1,11 +1,13 @@
 package com.pullein.divider;
 
+import android.graphics.Color;
 import android.os.Bundle;
 
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.pullein.divider.adapter.GridAdapter;
+import com.pullein.divider.decoration.GridDecoration;
 
 /**
  * RecyclerView Item Decoration<br>
@@ -27,7 +29,8 @@ public class GridLayoutActivity extends BaseActivity {
     protected void initView(Bundle savedInstanceState) {
         initToolbar(R.string.gridlayout);
         recyclerView = findViewById(R.id.recyclerView);
-        recyclerView.setLayoutManager(new GridLayoutManager(this,3));
+        recyclerView.addItemDecoration(new GridDecoration(Color.parseColor("#e9e9e9"), Color.parseColor("#e9e9e9"), 10, 10, true, true, true, false));
+        recyclerView.setLayoutManager(new GridLayoutManager(this, 3));
         recyclerView.setAdapter(new GridAdapter(this));
     }
 }
