@@ -29,7 +29,7 @@ public class GridLayoutActivity extends BaseActivity {
     protected void initView(Bundle savedInstanceState) {
         initToolbar(R.string.gridlayout);
         recyclerView = findViewById(R.id.recyclerView);
-        recyclerView.addItemDecoration(new GridDecoration(Color.parseColor("#e9e9e9"), Color.parseColor("#e9e9e9"), 10, 10, true, true, true, false));
+        recyclerView.addItemDecoration(new GridDecoration(Color.RED, Color.BLUE, 10, 20));
         recyclerView.setLayoutManager(new GridLayoutManager(this, 3));
         recyclerView.setAdapter(new GridAdapter(this));
     }
