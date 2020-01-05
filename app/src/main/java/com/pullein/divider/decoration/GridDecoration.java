@@ -134,7 +134,7 @@ public class GridDecoration extends RecyclerView.ItemDecoration {
             //最后一行开始索引
             int lastRawStartIndex = childCount - childCount % spanCount;
             if (childCount % spanCount == 0) {
-                lastRawStartIndex = childCount - childCount / spanCount;
+                lastRawStartIndex = childCount - spanCount;
             }
             // 最后一行不需要绘制底部需要绘制底部
             return itemPosition >= lastRawStartIndex;
@@ -145,7 +145,7 @@ public class GridDecoration extends RecyclerView.ItemDecoration {
                 //最后一行开始索引
                 int lastRawStartIndex = childCount - childCount % spanCount;
                 if (childCount % spanCount == 0) {
-                    lastRawStartIndex = childCount - childCount / spanCount;
+                    lastRawStartIndex = childCount - spanCount;
                 }
                 // 如果是最后一行，则不需要绘制底部
                 return itemPosition >= lastRawStartIndex;
